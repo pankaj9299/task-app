@@ -81,6 +81,10 @@ router.get('/users/me', auth, async (req, res) => {
     res.send(req.user)
 })
 
+router.get('/test', async (req, res) => {
+    res.status(200).send({ 'response': 'Cool!' })
+})
+
 router.get('/users/:id', async (req, res) => {
     const _id = req.params.id
 
