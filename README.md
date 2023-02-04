@@ -6,16 +6,35 @@ This is the NodeJS Task manupulation App where the authentication environment ha
 https://task-app-cavs.onrender.com/
 
 
-## Run Locally
+## API Reference
 
-To install this project run on the following command:
+#### Login User
 
-```bash
-  npm install
+```http
+  POST /users/login
 ```
 
-For the live development sync run command:
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email` | `string` | **Required**. Your email |
+| `password` | `string` | **Required**. Your password |
 
-```bash
-  npm run dev
+#### Create User
+
+```http
+  POST /users
 ```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` | **Required**. Your name |
+| `email`      | `string` | **Required**. Your email |
+| `password`      | `string` | **Required**. Your password |
+
+#### Logout User
+
+```http
+  POST /users/logout
+```
+
+
